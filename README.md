@@ -19,10 +19,12 @@ This script automates the process of organizing layers within a group based on t
 
 #### How to Install:
 
-1. [Download the script file](LINK_TO_DOWNLOAD) and save it to a location on your computer.
+1. [Download archive] and save it to a location on your computer.
 2. Open Adobe Photoshop and the document you want to organize.
 3. Go to "File" > "Scripts" > "Browse..." and select the downloaded script file.
 4. The script will run, organizing layers within the selected group based on their slot colors.
+
+[Download archive]: https://github.com/abdul-karim-mia/Sort-Layers-by-Slot-Color-photoshop-script/archive/refs/heads/main.zip
 
 #### Usage Instructions:
 
