@@ -25,7 +25,7 @@ This script automates the process of organizing layers within a group based on t
 4. The script will run, organizing layers within the selected group based on their slot colors.
 
 [Download archive]: https://github.com/abdul-karim-mia/Sort-Layers-by-Slot-Color-photoshop-script/archive/refs/heads/main.zip
-[Abdul Karim Mia]: https://www.abdulkarimmia.com
+
 #### Usage Instructions:
 
 1. Open the Photoshop document containing the layers you want to organize.
@@ -40,8 +40,10 @@ This script automates the process of organizing layers within a group based on t
 If you find this script helpful, you can support the development of more scripts via [PayPal].
 
 [PayPal]: https://paypal.me/akmia51
+[Abdul Karim Mia]: https://www.abdulkarimmia.com
 
 <a href="https://paypal.me/akmia51">
   <img width="147" height="40" src="https://i.ibb.co/Z8Wd8Sn/paypal-badge.png" >
 </a>
-Check My Other Script Or Contact Me for Custom Script [Abdul Karim Mia]
+
+Check My Other Script Or Contact Me for Custom Script [Abdul Karim Mia].
