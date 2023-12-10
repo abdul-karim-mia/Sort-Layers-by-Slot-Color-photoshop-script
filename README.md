@@ -3,7 +3,7 @@
 #### Description:
 This script automates the process of organizing layers within a group based on their slot color in Adobe Photoshop. When working with complex projects, designers often use slot colors to categorize and distinguish layers. This script simplifies the organization by sorting layers within a group according to their assigned slot colors.
 
-[![Watch the script in action](https://img.youtube.com/vi/YOUR_YOUTUBE_VIDEO_ID/mqdefault.jpg)](https://youtu.be/YOUR_YOUTUBE_VIDEO_ID "Sort Layers by Slot Color - Photoshop Script")
+[![Watch the script in action](https://img.youtube.com/vi/GbsdYysuNmw/mqdefault.jpg)](https://youtu.be/GbsdYysuNmw "Sort Layers by Slot Color - Photoshop Script")
 
 #### How the Script Works:
 
@@ -37,6 +37,8 @@ This script automates the process of organizing layers within a group based on t
 ## 💸 Donate
 If you find this script helpful, you can support the development of more scripts via [PayPal].
 
-[PayPal]: YOUR_PAYPAL_LINK
+[PayPal]: https://paypal.me/akmia51
 
-[![Support via PayPal](YOUR_PAYPAL_BADGE_IMAGE_URL)](YOUR_PAYPAL_LINK)
+<a href="https://paypal.me/akmia51">
+  <img width="147" height="40" src="https://i.ibb.co/Z8Wd8Sn/paypal-badge.png" >
+</a>
