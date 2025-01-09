@@ -4,7 +4,7 @@
  */
 /*
 <javascriptresource>
-<about>$$$/JavaScripts/SortLayersbyColor/About=Sort Layers by Slot Color - By Abdul Karim Mia.^r^rCopyright 2023 Abdul Karim Mia.^r^rScript utility for organizing layers within a group based on color labels.^r</about>
+<about>$$$/JavaScripts/SortLayersbyColor/About=Sort Layers by Slot Color - By Abdul Karim Mia.^r^rCopyright 2023 Abdul Karim Mia.^r^rScript utility for organizing layers within a group based on color [...]
 <category>Abdul's Scripts</category>
 </javascriptresource>
 
@@ -34,31 +34,30 @@ Check other scripts by the author:
 https://github.com/abdul-karim-mia
 */
 
-
-// Function to get the color name based on type ID
-function getColorName(colorTypeID) {
+// Function to get the color number based on type ID
+function getColorNumber(colorTypeID) {
     switch (colorTypeID) {
-        case charIDToTypeID('Rd  '): return 'Red';
-        case charIDToTypeID('Orng'): return 'Orange';
-        case charIDToTypeID('Ylw '): return 'Yellow';
-        case charIDToTypeID('Grn '): return 'Green';
-        case 1399152998: return 'SeaFoam';
-        case charIDToTypeID('Bl  '): return 'Blue';
-        case 1231971433: return 'Indigo';
-        case 1298624116: return 'Magenta';
-        case 1182098280: return 'Fuchsia';
-        case charIDToTypeID('Vlt '): return 'Violet';
-        case charIDToTypeID('Gry '): return 'Gray';
-        default: return 'Unknown';
+        case charIDToTypeID('Rd  '): return 1; // Red
+        case charIDToTypeID('Orng'): return 2; // Orange
+        case charIDToTypeID('Ylw '): return 3; // Yellow
+        case charIDToTypeID('Grn '): return 4; // Green
+        case 1399152998: return 5; // SeaFoam
+        case charIDToTypeID('Bl  '): return 6; // Blue
+        case 1231971433: return 7; // Indigo
+        case 1298624116: return 8; // Magenta
+        case 1182098280: return 9; // Fuchsia
+        case charIDToTypeID('Vlt '): return 10; // Violet
+        case charIDToTypeID('Gry '): return 11; // Gray
+        default: return 999; // Unknown
     }
 }
 
-// Function to compare layers based on color labels
+// Function to compare layers based on color numbers
 function compareLayers(layer1, layer2) {
-    var color1 = layer1.colorTypeID;
-    var color2 = layer2.colorTypeID;
+    var color1 = layer1.colorNumber;
+    var color2 = layer2.colorNumber;
 
-    // Compare based on color type IDs directly for efficiency
+    // Compare based on color numbers directly for efficiency
     return color1 - color2;
 }
 
@@ -77,18 +76,18 @@ function sortLayersByColor(group) {
 
         if (layerDesc.hasKey(charIDToTypeID('Clr '))) {
             var colorTypeID = layerDesc.getEnumerationValue(charIDToTypeID('Clr '));
-            layersWithColor.push({ layer: layersArray[i], colorTypeID: colorTypeID });
+            layersWithColor.push({ layer: layersArray[i], colorNumber: getColorNumber(colorTypeID) });
         }
     }
 
-    // Sort layers based on color labels
+    // Sort layers based on color numbers
     layersWithColor.sort(compareLayers);
 
     // Move the layers to group them consecutively by color
     var currentColor = null;
     for (var j = 0; j < layersWithColor.length; j++) {
         var layer = layersWithColor[j].layer;
-        var color = getColorName(layersWithColor[j].colorTypeID);
+        var color = layersWithColor[j].colorNumber;
 
         if (color !== currentColor) {
             // Move to the end of the group
