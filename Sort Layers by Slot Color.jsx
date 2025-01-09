@@ -39,12 +39,16 @@ https://github.com/abdul-karim-mia
 function getColorName(colorTypeID) {
     switch (colorTypeID) {
         case charIDToTypeID('Rd  '): return 'Red';
+        case charIDToTypeID('Orng'): return 'Orange';
         case charIDToTypeID('Ylw '): return 'Yellow';
         case charIDToTypeID('Grn '): return 'Green';
+        case 1399152998: return 'SeaFoam';
         case charIDToTypeID('Bl  '): return 'Blue';
+        case 1231971433: return 'Indigo';
+        case 1298624116: return 'Magenta';
+        case 1182098280: return 'Fuchsia';
         case charIDToTypeID('Vlt '): return 'Violet';
         case charIDToTypeID('Gry '): return 'Gray';
-        case charIDToTypeID('Orng'): return 'Orange';
         default: return 'Unknown';
     }
 }
