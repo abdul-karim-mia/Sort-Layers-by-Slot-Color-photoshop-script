@@ -69,6 +69,7 @@ function sortLayersByColor(group) {
     // Convert layers to an array of objects with color information
     var layersWithColor = [];
     for (var i = 0; i < layersArray.length; i++) {
+        if(layersArray[i].isBackgroundLayer||layersArray[i].allLocked) continue;
         var layerRef = new ActionReference();
         layerRef.putProperty(charIDToTypeID('Prpr'), charIDToTypeID('Clr '));
         layerRef.putIdentifier(charIDToTypeID('Lyr '), layersArray[i].id);
@@ -113,5 +114,5 @@ if (activeLayer && activeLayer.typename === 'LayerSet') {
     // Create a history state for the entire operation
     activeDocument.suspendHistory("Sort Layers by Slot Color", "sortLayersByColor(activeLayer)");
 } else {
-    alert("Please select a group before running this script.");
+    activeDocument.suspendHistory("Sort Layers by Slot Color", "sortLayersByColor(activeDocument)");
 }
